@@ -175,9 +175,13 @@ Linux administrators, DevOps and SRE teams, MSPs, hosting providers, SaaS operat
 - EzzeSecure is not a backup system or a universal SIEM replacement.
 - This repository currently has no explicit open-source license. See [licensing status](docs/LICENSING.md).
 
-## Roadmap — not currently available
+## Roadmap
 
-Broader environment auto-detection, hosting and control-panel adapters, WhatsApp read-only server operations, natural-language infrastructure queries, secure allowlisted remote actions with explicit approvals and post-action verification, and expanded reputation evidence are planned areas. None of these are current Community Preview capabilities.
+**v0.2.0 — Intelligent Watchdog (planned):** Read-only WhatsApp server visibility and evidence-supported infrastructure questions.
+
+**v0.3.0 — Secure Remote Operations (planned):** Controlled, allowlisted server actions with explicit approval and post-action verification.
+
+These capabilities are not currently available. The roadmap is directional and may change based on Community feedback, technical validation, and security review. See the [full roadmap](ROADMAP.md).
 
 ## Project guides
 
