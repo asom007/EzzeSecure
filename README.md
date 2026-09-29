@@ -18,14 +18,28 @@ Explanations are evidence-based assessments. They do not prove a root cause when
 
 ## Screenshots
 
-Product screenshots are being prepared. [The screenshot guide](docs/images/README.md) specifies the four planned views:
-
-| Image | What it should show |
-| --- | --- |
-| `overview.png` | Server status and main evidence summary. |
-| `server-detail.png` | Resource history, services, and available host observations. |
-| `incidents.png` | An incident, timeline, and supporting evidence. |
-| `trust-reputation.png` | DNS, TLS, and mail findings in Trust & Reputation. |
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/images/overview.png" alt="EzzeSecure Overview dashboard" width="100%"><br>
+      <strong>Overview</strong> — server health, resources, and operational status
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/images/server-detail.png" alt="EzzeSecure Server Detail view" width="100%"><br>
+      <strong>Server Detail</strong> — metrics, services, capacity, and collected evidence
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/images/incidents.png" alt="EzzeSecure Incident Investigation view" width="100%"><br>
+      <strong>Incident Investigation</strong> — incident timeline and investigation context
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/images/trust-reputation.png" alt="EzzeSecure Trust and Reputation view" width="100%"><br>
+      <strong>Trust &amp; Reputation</strong> — domain reputation and Form Shield controls
+    </td>
+  </tr>
+</table>
 
 ## What you can do today
 
@@ -154,7 +168,7 @@ Linux administrators, DevOps and SRE teams, MSPs, hosting providers, SaaS operat
 ## Community Preview limits
 
 - Preview software; validate it before relying on it operationally.
-- Run from a source checkout for now. The current packaging metadata causes `pip install -e .` to fail package discovery.
+- Community Preview currently runs directly from the source checkout.
 - One active real Linux agent per Community control plane.
 - Real-server monitoring is read-only. Remote execution and production actions are unavailable; action demonstrations are confined to the local simulator.
 - Evidence quality depends on host permissions, configured adapters, polling cadence, and available logs. Black Box is sampled evidence, not complete endpoint protection.
