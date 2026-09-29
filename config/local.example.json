@@ -1,0 +1,8 @@
+{
+  "organization": "Local Operations",
+  "username": "operator",
+  "owner_phone": "+15555550123",
+  "mode": "local-demo",
+  "provider": "deterministic",
+  "daily_brief_hour_utc": 6
+}

@@ -1,0 +1,16 @@
+[project]
+name = "ezzesecure"
+version = "0.1.0"
+description = "Self-hosted, read-only Linux operations and security investigation with optional local or BYOK intelligence."
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+ai = ["cryptography==50.0.1"]
+notifications = ["cryptography==50.0.1"]
+
+[project.scripts]
+ezzesecure = "heimdall.__main__:main"
+
+[tool.unittest]
+start-directory = "tests"

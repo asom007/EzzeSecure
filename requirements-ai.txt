@@ -1,0 +1,4 @@
+# Optional encrypted credentials for Community BYOK and notifications; monitoring requires none of these packages.
+cryptography==50.0.1
+cffi==2.1.1; platform_python_implementation != "PyPy"
+pycparser==3.0; platform_python_implementation != "PyPy"

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>EzzeSecure Community · AI Operations &amp; Security Assistant</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+  <script src="/ai-settings.js" defer></script>
+  <script src="/notification-settings.js" defer></script>
+  <script src="/operations-ui.js" defer></script>
+  <script src="/trust-reputation.js" defer></script>
+</head>
+<body>
+  <section id="login-screen" class="login-screen" hidden>
+    <div class="login-brand"><span class="brand-mark">E</span><span>EzzeSecure<small>AI Operations &amp; Security Assistant</small></span></div>
+    <div class="login-card">
+      <div class="eyebrow">LOCAL OPERATIONS CONSOLE</div>
+      <h1>A clear view.<br>A safer next move.</h1>
+      <p class="muted">Monitor your servers, investigate collected evidence, and explore clearly marked action demos.</p>
+      <form id="login-form">
+        <label for="username">Username</label><input id="username" name="username" autocomplete="username" required>
+        <label for="password">Password</label><input id="password" name="password" type="password" autocomplete="current-password" required>
+        <button class="button primary" type="submit">Sign in to console <span aria-hidden="true">→</span></button>
+      </form>
+      <p id="login-error" class="error" role="alert"></p>
+      <p class="login-note">Use the credentials from your local setup. Real server monitoring is read-only. Demo infrastructure is clearly labeled.</p>
+    </div>
+    <div class="login-footer">by EzzeMedia <span>•</span> EZZESECURE COMMUNITY</div>
+  </section>
+  <div id="app" class="app-shell" hidden>
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview"><span class="brand-mark">E</span><span>EzzeSecure<small>AI Operations &amp; Security Assistant</small></span></a>
+      <div class="workspace"><span class="workspace-icon">L</span><div>Local workspace<small id="workspace-mode">READ-ONLY MONITORING</small></div><span class="live-dot"></span></div>
+      <nav id="navigation" aria-label="Main navigation"></nav>
+      <div class="sidebar-footer"><span class="live-dot"></span><span>Local control plane<small id="sidebar-mode">Evidence first</small></span><span class="version">V1</span></div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar"><div class="breadcrumb"><button id="menu-toggle" class="icon-button mobile-menu" aria-label="Toggle navigation" aria-expanded="false">☰</button><span>Workspace</span><span class="crumb-separator">/</span><strong id="breadcrumb-current">Overview</strong></div><div class="topbar-right"><span id="mode-label" class="pill subtle">COMMUNITY READ-ONLY</span><span id="session-user" class="session-user"></span><button id="logout" class="text-button">Sign out</button></div></header>
+      <div class="simulation-banner"><span class="banner-dot"></span><strong id="mode-title">Read-only monitoring</strong><span id="mode-description">Select a server to inspect collected evidence. Demo observations are clearly labeled.</span></div>
+      <main id="main" tabindex="-1">
+        <div class="page-heading"><div><div class="eyebrow">YOUR INFRASTRUCTURE, IN FOCUS</div><h1 id="page-title">Overview</h1><p id="page-description" class="muted"></p></div><div class="page-actions"><button id="collect" class="button secondary">↻ <span>Collect snapshot</span></button><button id="brief" class="button primary">Generate brief <span aria-hidden="true">↗</span></button></div></div>
+        <div id="global-message" class="global-message" role="status" hidden></div>
+        <div id="scenario-toolbar" class="scenario-toolbar"><div><span class="live-dot"></span><label for="server-selector">Server <select id="server-selector" aria-label="Selected server"></select></label><span class="muted" id="last-observed">Awaiting snapshot</span></div><label id="scenario-label" for="scenario">Explore a scenario <select id="scenario"><option value="">Choose simulation…</option><option value="healthy">Healthy baseline</option><option value="growth">Traffic growth</option><option value="attack">Suspicious traffic</option><option value="queue">Queue backlog</option><option value="capacity">Capacity pressure</option><option value="database">Database failure</option></select></label></div>
+        <section id="content" aria-live="polite"></section>
+        <footer class="main-footer"><span>EzzeSecure Community <span class="muted">· AI Operations &amp; Security Assistant</span></span><span>by EzzeMedia · Evidence first.</span></footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
